@@ -5,9 +5,9 @@ from PIL import Image
 import numpy as np
 
 # Universal values
-SPOTIPY_CLIENT_ID = "33bef6aa56ac42c2a2583fce959d5a31"
-SPOTIPY_CLIENT_SECRET = "42059ccc9ead41d5aedf3210b9b9f047"
-username = "gurashish"
+SPOTIPY_CLIENT_ID = ""
+SPOTIPY_CLIENT_SECRET = ""
+username = ""
 scope = "user-read-currently-playing"
 redirect_uri = "http://localhost:8080/"
 
@@ -81,12 +81,6 @@ def current_playing_song_info(sp):
     song = track["item"]["name"]
     img_url = track["item"]["album"]["images"][0]["url"]
     info_lst.extend([img_url,artist,album,song])
-    # print(info_lst)
-    # print(img_url)
-    # print('IS PLAYING = ' + str(track["is_playing"]))
-    # print(artist)
-    # print(album)
-    # print(song)
     return info_lst
 
 # Download the image from the url given.
